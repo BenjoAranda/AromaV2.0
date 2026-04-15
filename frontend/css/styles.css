@@ -57,7 +57,7 @@ body {
 .brand-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #4b2e1f;
+  color: #0a0b0c;
   letter-spacing: 0.5px;
 }
 
@@ -76,7 +76,7 @@ body {
 .nav-link {
   display: inline-block;
   text-decoration: none;
-  color: #5c3a21;
+  color: #262bc8;
   font-weight: 600;
   padding: 10px 16px;
   border-radius: 999px;
@@ -86,7 +86,7 @@ body {
 
 /* Hover bonito */
 .nav-link:hover {
-  background: #6f4e37;
+  background: #3b7ee4;
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(111, 78, 55, 0.22);
@@ -94,7 +94,7 @@ body {
 
 /* Link activo opcional */
 .nav-link.active {
-  background: #3e2723;
+  background: #0d30ba;
   color: #fff;
   box-shadow: 0 8px 18px rgba(62, 39, 35, 0.25);
 }
@@ -134,7 +134,7 @@ main {
 /* TÍTULOS Y TEXTO */
 .view h2 {
   font-size: 2rem;
-  color: #4b2e1f;
+  color: #071128;
   margin-bottom: 14px;
   position: relative;
 }
@@ -144,14 +144,14 @@ main {
   display: block;
   width: 70px;
   height: 4px;
-  background: linear-gradient(90deg, #6f4e37, #c08b5c);
+  background: linear-gradient(90deg, #5a80df, #1f67db);
   border-radius: 10px;
   margin-top: 10px;
 }
 
 .view p {
   font-size: 1.08rem;
-  color: #5f4635;
+  color: #0f0e0d;
   line-height: 1.7;
   max-width: 700px;
   margin-top: 18px;
@@ -193,7 +193,7 @@ footer {
 }
 
 footer p {
-  color: #6a4a35;
+  color: #111110;
   font-size: 0.95rem;
   letter-spacing: 0.2px;
 }
