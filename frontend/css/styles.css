@@ -20,7 +20,7 @@
 /* Página */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f8f5f1, #efe7dd);
+  background: linear-gradient(135deg, #6cb6f1, #1d42e8);
   min-height: 100vh;
 }
 
@@ -217,8 +217,35 @@ footer p {
   gap: 20px;
 }
 
-.products-card {
+.product-card {
+  background-color: #aebcda;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  p {
+    color: black;
+  }
+  span {
+    color: rgb(11, 10, 10);
+  }
 }
 
-.products-price {
+.btn-add {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: #2767b5;
+  color: rgb(217, 206, 206);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-add:hover {
+  background: #2388d1;
+  color: black;
+  transform: translateY(2px);
 }

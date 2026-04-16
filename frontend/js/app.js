@@ -32,7 +32,7 @@ const productos = [
   {
     id: 2,
     nombre: "Audifonos",
-    descripcion: "Audifonos de cable como de blutube",
+    descripcion: "Audifonos de cable como de bluetooth",
     precio: 50,
   },
   {
@@ -44,14 +44,38 @@ const productos = [
   {
     id: 4,
     nombre: "Baterias",
-    descripcion: "Baterias de los modelos samsung y apple",
+    descripcion: "Baterias Originales de los modelos samsung y apple",
     precio: 150,
   },
   {
     id: 5,
     nombre: "Pantallas",
-    descripcion: "Pantallas de marca samsung y apple",
+    descripcion: "Pantallas Originales de marca samsung y apple",
     precio: "150",
+  },
+  {
+    id: 6,
+    nombre: "Soporte de celular",
+    descripcion: "Soportes de cualquier tamaño para su celular",
+    precio: "100",
+  },
+  {
+    id: 7,
+    nombre: "Protectores para cables USB",
+    descripcion: "Soportes perzonalisados a su gusto",
+    precio: "40",
+  },
+  {
+    id: 8,
+    nombre: "Fundas Transparentes",
+    descripcion: "Fundas para los celulares Samsung y Apple",
+    precio: "15",
+  },
+  {
+    id: 9,
+    nombre: "Mandos de mano",
+    descripcion: "Mandos adaptables a los celulares Samsung y Apple",
+    precio: "70",
   },
 ];
 
@@ -60,11 +84,22 @@ function renderizarProductos() {
   contenedor.innerHTML = "";
   productos.forEach(function (producto) {
     contenedor.innerHTML += `<div class="product-card">
-  <h3>${producto.nombre}</h3>
-  <p>${producto.descripcion}</p>
-  <span>${producto.precio}</span>
-</div>`;
+    <h3>${producto.nombre}</h3>
+    <p class="product-description">${producto.descripcion}</p>
+    <span class="product-price">Bs. ${producto.precio}</span>
+    <br>
+    <button class="btn-add" data-id="${producto.id}">Agregar al carrito</button>
+  </div>`;
   });
 }
+
+const botones = document.querySelectorAll(".btn-add");
+
+botones.forEach(function (boton) {
+  boton.addEventListener("click", function () {
+    const id = this.dataset.id;
+    console.log("Producto agregado:", id);
+  });
+});
 
 renderizarProductos();
