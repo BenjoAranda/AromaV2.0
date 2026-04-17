@@ -79,7 +79,15 @@ const productos = [
   },
 ];
 
+let carrito = [];
+
+function actualizarContador() {
+  const contador = document.getElementById("cart-count");
+  contador.textContent = carrito.length;
+}
+
 function renderizarProductos() {
+  //Crear contenedor de cada producto
   const contenedor = document.getElementById("products-container");
   contenedor.innerHTML = "";
   productos.forEach(function (producto) {
@@ -91,15 +99,22 @@ function renderizarProductos() {
     <button class="btn-add" data-id="${producto.id}">Agregar al carrito</button>
   </div>`;
   });
-}
 
-const botones = document.querySelectorAll(".btn-add");
+  // Funcionamiento botones
+  const botones = document.querySelectorAll(".btn-add");
 
-botones.forEach(function (boton) {
-  boton.addEventListener("click", function () {
-    const id = this.dataset.id;
-    console.log("Producto agregado:", id);
+  botones.forEach(function (boton) {
+    boton.addEventListener("click", function () {
+      const id = parseInt(this.dataset.id);
+      // alert("Producto agregado:" + id);
+
+      const producto = productos.find((p) => p.id === id);
+      carrito.push(producto);
+      console.log("carrito: ", carrito);
+
+      actualizarContador();
+    });
   });
-});
+}
 
 renderizarProductos();
